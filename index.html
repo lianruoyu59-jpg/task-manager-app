@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务管理器 - Azure部署示例</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 我的任务管理器</h1>
+            <p>Azure Static Web Apps 演示应用</p>
+        </header>
+        
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="输入新任务..." maxlength="100">
+            <button onclick="addTask()">添加任务</button>
+        </div>
+        
+        <div class="task-stats">
+            <span>总任务: <span id="totalTasks">0</span></span>
+            <span>已完成: <span id="completedTasks">0</span></span>
+        </div>
+        
+        <div id="taskList" class="task-list"></div>
+        
+        <div class="actions">
+            <button onclick="clearCompleted()">清除已完成</button>
+            <button onclick="clearAll()">清除所有</button>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
